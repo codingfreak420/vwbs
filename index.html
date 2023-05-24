@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+ <style media="screen">
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fcfcfc;
+    font-family: sans-serif;
+}
+
+    footer {
+      position: relative;
+      margin-top: 100vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      width: 100vw;
+      padding-top: 30px;
+      color: white;
+      background: linear-gradient(var(--grey), var(--black)12%)
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-content h3 {
+    
+    }
+
+    .footer-content p {
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: calc(2vw + 2vh + 4vmin);
+      color: #cfd2d6;
+    }
+
+
+   .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid green;
+    padding: 5px;
+    border-radius: 25%;
+
+}
+.socials a i{
+    font-size: calc(.5vw + .5vh + 1vmin);
+    width: 2vw;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: green;
+}
+
+  
+    .footer-bottom {
+      background: var(--black);
+      width: 100vw;
+      padding: 20px;
+      text-align: center;
+      height: 10vh;
+    }
+
+    .footer-bottom .copy {
+      float: left;
+      font-size: calc(.5vw + .5vh + 1vmin)
+      word-spacing: 1vw;
+      text-transform: capitalize;
+      font-family: 'VT323', monospace;
+    }
+
+    .footer-bottom a {
+      font-size: calc(.5vw + .5vh + 1vmin)
+      text-decoration: none;
+      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+      background-size: 200% auto;
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animatedgradient 3s ease alternate infinite;
+      font-family: 'Electrolize', sans-serif;
+    }
+
+    .footer-bottom span {
+      text-transform: uppercase;
+      opacity: .4;
+      font-weight: 200;
+    }
+
+    .footer-menu {
+      float: right;
+      text-align: center;
+      font-family: 'Electrolize', sans-serif;
+
+    }
+
+    .footer-menu ul {
+      display: flex;
+
+    }
+
+    .footer-menu ul li {
+      padding-right: 10px;
+      display: block;
+    }
+
+    .footer-menu ul li a {
+
+      text-decoration: none;
+      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+      background-size: 200% auto;
+
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: animatedgradient 3s ease alternate infinite;
+    }
+    
+
+    .footer-menu ul li a:hover {
+      color: green;
+    }
+
+    @media (max-width: 580px) {
+      .footer-bottom {
+        height: auto;
+      }
+
+      .footer-bottom p {
+        float: none;
+        margin-top: 1vh
+      }
+
+      .footer-menu {
+        float: none;
+        display: inline-block;
+      }
+
+    }
+
+    @media (max-width:500px) {
+      .footer-menu ul {
+        display: flex;
+      }
+
+    }
+  </style>
+
+
+
+  <!-- App title -->
+  <title>Responsive Pure CSS Menu</title>
+
+  <!-- Link css file -->
+    <link rel="stylesheet" href="main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&family=VT323&display=swap" rel="stylesheet">
+  
+</head>
+<body>  
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo"><img src='https://github.com/codingfreak420/basecompany/blob/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png?raw=true'></a>
+  
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a> </li>
+                <li><a href="#">About</a></li>
+                <li class="subnav">
+                    <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
+                    <div class="subnav-content">
+                        <a href="#">Email</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Phone</a>
+                    </div>
+                </li>
+                <li class="subnav">
+                    <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
+                    <div class="subnav-content">
+                        <a href="#">Email</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Phone</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    <!-- Main content -->
+      <video playsinline autoplay muted loop class="intro">
+        <source src="https://codingfreak420.github.io/valinwebdesigns/video-cropper.mp4">
+      </video>
+        <fieldset id='homemain'>
+      <h1>EXPERIENCE DIGITAL INNOVATION</h1>
+    </fieldset>
+</header>
+ <!-- Main content -->      
+<main>   
+  <section1>
+  <div class="bg-text-container">
+    <div class="animate-text">
+      <span>Build.Deploy.Grow.&nbsp;</span>
+      <span>Build.Deploy.Grow.&nbsp;</span>
+    </div>
+    <div class="animate-text left">
+      <span>Build.Deploy.Grow.&nbsp;</span>
+      <span>Build.Deploy.Grow.&nbsp;</span>
+    </div>
+      </div>
+  <div class="container">
+    <div class="col">
+      <h2>Passion.Dedication.Teamwork</h2>
+      <p>The goal isn’t to build a website. The goal is to build your business. Our commited team
+          understands building your success online can open up your business to new possibilities. With passion,
+          dedication, and a lot of coffee we do our best to bring your message to the world.</p>
+    </div>
+  </div>
+   </section1>
+  <section2>
+    <ul class="services">
+      <li class="inverted-2">Web Development</li>
+      <li>Search Engine Optimization</li>
+      <li>Company Branding & Marketing</li>
+      <li>Social Content & Web Management</li>
+      <li>Email Optimzation</li>
+      <li>Email List Management</li>
+      <li>Training</li>
+      <li>Request A Quote</li>
+      <li class="glitch" data-glitch="Contact Us">Contact Us</li>
+    </ul>
+  </section2>  
+  </main>
+  <footer>
+    <div class="footer-content">
+      <a href='#' class='footerlogo'>
+        <h3><img
+   src='https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png'
+            id='footerlogo' /></h3>
+      </a>
+      <div>We are proud to serve our community.</div>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div class="copy">copyright &copy; <a href="#">Valin Web Development</a></div>
+      <div class="footer-menu">
+        <ul class="f-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
